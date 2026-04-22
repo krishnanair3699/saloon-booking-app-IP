@@ -1,0 +1,82 @@
+sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:127 [Hydrated]
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:167 You should call navigate() in a React.useEffect(), not when your component is first rendered.
+Pe @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:167
+(anonymous) @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:3945
+nb @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:14081
+rS @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:6
+O1 @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+k1 @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+FM @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+qd @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+C1 @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+dy @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:1
+ay @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:1Understand this warning
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:14222 Database already initialized
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:11272 Autoplay blocked by browser. User interaction required.
+audio_d0a6f2a6e8.mp3:1  GET https://cdn.pixabay.com/audio/2022/03/10/audio_d0a6f2a6e8.mp3 403 (Forbidden)Understand this error
+admin:1 The resource https://player-waffle-13763594.figma.site/_json/833f9834-049e-4398-83d5-55c1803c5080/_index.json was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13774 Fetching massages from: https://huihouqwgdtoxqnyvitz.supabase.co/functions/v1/make-server-86f09702/massages
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13774 Using access token: Yes (admin-token-special)
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13775  GET https://huihouqwgdtoxqnyvitz.supabase.co/functions/v1/make-server-86f09702/massages 401 (Unauthorized)
+d @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13775
+(anonymous) @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13768
+sp @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Xa @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+HM @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Is @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+_E @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Ri @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:6
+(anonymous) @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8Understand this error
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13776 Massages response status: 401
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13778 Massages endpoint returned 401 Error: {"code":401,"message":"Invalid JWT"}
+d @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13778
+await in d
+(anonymous) @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13768
+sp @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Xa @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+HM @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Is @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+_E @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Ri @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:6
+(anonymous) @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8Understand this error
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13778 Using empty data
+d @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13778
+await in d
+(anonymous) @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13768
+sp @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Xa @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+HM @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Is @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+_E @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+Ri @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:6
+(anonymous) @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8Understand this error
+admin:1 The resource https://player-waffle-13763594.figma.site/_json/833f9834-049e-4398-83d5-55c1803c5080/_index.json was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13811  POST https://huihouqwgdtoxqnyvitz.supabase.co/functions/v1/make-server-86f09702/admin/massages 401 (Unauthorized)
+m @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13811
+lD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+cD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+fD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+oE @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+OC @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+(anonymous) @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+fS @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+eC @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+Iy @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+Fv @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+kD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5Understand this error
+1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13823 Save therapy massage error: Error: Failed to save therapy massage
+    at m (1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13820:15)
+m @ 1c51e9abd8fdf7824c7a780a93d91162d1cc004d.js:13823
+await in m
+lD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+cD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+fD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+oE @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+OC @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+(anonymous) @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+fS @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:8
+eC @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+Iy @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+Fv @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5
+kD @ sites-runtime.5fd7f14a7607f942d4ac001a8e59a1f298f13ccd58b6725e98070fe5777b608d.js:5Understand this error
+admin:1 The resource https://player-waffle-13763594.figma.site/_json/833f9834-049e-4398-83d5-55c1803c5080/_index.json was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.

@@ -1,0 +1,10 @@
+/* All @import statements must be at the top */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap');
+
+:root {
+  --font-archive: 'Archivo Black', sans-serif;
+  --font-pacifico: 'Pacifico', cursive;
+  --font-averia: 'Averia Serif Libre', serif;
+}

@@ -1,0 +1,437 @@
+{
+  "info": {
+    "name": "SAVADHIKA Spa Booking API",
+    "description": "Complete API collection for SAVADHIKA Java Spring Boot backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/api",
+      "type": "string"
+    },
+    {
+      "key": "customerId",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "massageId",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "cartId",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"9876543210\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/signup",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "signup"]
+            },
+            "description": "Register a new customer account"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            },
+            "description": "Login and receive JWT token"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Massages",
+      "item": [
+        {
+          "name": "Get All Massages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages"]
+            },
+            "description": "Retrieve all available massages"
+          }
+        },
+        {
+          "name": "Get Massages by City",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages?city=Mumbai",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages"],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "Mumbai"
+                }
+              ]
+            },
+            "description": "Filter massages by city (Mumbai or Delhi)"
+          }
+        },
+        {
+          "name": "Get Massages by Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages?massageType=Head & Shoulders",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages"],
+              "query": [
+                {
+                  "key": "massageType",
+                  "value": "Head & Shoulders"
+                }
+              ]
+            },
+            "description": "Filter massages by type"
+          }
+        },
+        {
+          "name": "Get Massages by Type and City",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages?massageType=Full Body&city=Delhi",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages"],
+              "query": [
+                {
+                  "key": "massageType",
+                  "value": "Full Body"
+                },
+                {
+                  "key": "city",
+                  "value": "Delhi"
+                }
+              ]
+            },
+            "description": "Filter by both type and city"
+          }
+        },
+        {
+          "name": "Get Massage by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages/{{massageId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages", "{{massageId}}"]
+            },
+            "description": "Get specific massage details"
+          }
+        },
+        {
+          "name": "Create Massage (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"massageName\": \"Relaxing Head Massage\",\n  \"massageDescription\": \"A soothing massage for head and shoulders to relieve stress\",\n  \"massageType\": \"Head & Shoulders\",\n  \"massagePrice\": 800.0,\n  \"massageDuration\": 30,\n  \"massageZone\": \"Mumbai\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/massages",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages"]
+            },
+            "description": "Create a new massage service (Admin only)"
+          }
+        },
+        {
+          "name": "Update Massage (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"massageName\": \"Updated Head Massage\",\n  \"massageDescription\": \"Updated description\",\n  \"massageType\": \"Head & Shoulders\",\n  \"massagePrice\": 900.0,\n  \"massageDuration\": 45,\n  \"massageZone\": \"Mumbai\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/massages/{{massageId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages", "{{massageId}}"]
+            },
+            "description": "Update existing massage (Admin only)"
+          }
+        },
+        {
+          "name": "Delete Massage (Admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/massages/{{massageId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["massages", "{{massageId}}"]
+            },
+            "description": "Delete a massage (Admin only)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Booking & Cart",
+      "item": [
+        {
+          "name": "Add to Cart",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": {{customerId}},\n  \"massageId\": {{massageId}},\n  \"bookingDate\": \"2026-03-25\",\n  \"bookingTime\": \"14:00\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bookings/cart",
+              "host": ["{{baseUrl}}"],
+              "path": ["bookings", "cart"]
+            },
+            "description": "Add a massage to cart with booking details"
+          }
+        },
+        {
+          "name": "Get Cart Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/bookings/cart/{{customerId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["bookings", "cart", "{{customerId}}"]
+            },
+            "description": "Retrieve all cart items for a customer"
+          }
+        },
+        {
+          "name": "Get Cart Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/bookings/cart/count/{{customerId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["bookings", "cart", "count", "{{customerId}}"]
+            },
+            "description": "Get number of items in cart"
+          }
+        },
+        {
+          "name": "Remove from Cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/bookings/cart/{{cartId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["bookings", "cart", "{{cartId}}"]
+            },
+            "description": "Remove specific item from cart"
+          }
+        },
+        {
+          "name": "Clear Cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/bookings/cart/clear/{{customerId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["bookings", "cart", "clear", "{{customerId}}"]
+            },
+            "description": "Clear all items from customer's cart"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Validate Coupon",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"couponCode\": \"FIRSTTIME15\",\n  \"customerId\": {{customerId}},\n  \"amount\": 2000.0\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/validate-coupon",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "validate-coupon"]
+            },
+            "description": "Validate coupon code and calculate discount"
+          }
+        },
+        {
+          "name": "Process Payment (No Coupon)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": {{customerId}},\n  \"massageId\": {{massageId}},\n  \"paymentMethod\": \"Credit Card\",\n  \"paymentDetails\": \"Visa ending in 1234\",\n  \"amount\": 800.0\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/process",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "process"]
+            },
+            "description": "Process payment without coupon"
+          }
+        },
+        {
+          "name": "Process Payment (With Coupon)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": {{customerId}},\n  \"massageId\": {{massageId}},\n  \"paymentMethod\": \"UPI\",\n  \"paymentDetails\": \"GooglePay - 9876543210\",\n  \"amount\": 2000.0,\n  \"couponCode\": \"FIRSTTIME15\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/process",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "process"]
+            },
+            "description": "Process payment with coupon code"
+          }
+        },
+        {
+          "name": "Get Payment History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payments/history/{{customerId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "history", "{{customerId}}"]
+            },
+            "description": "Get all payments made by a customer"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Generate MIS Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"startDate\": \"2026-03-01\",\n  \"endDate\": \"2026-03-31\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reports/mis",
+              "host": ["{{baseUrl}}"],
+              "path": ["reports", "mis"]
+            },
+            "description": "Generate MIS report for date range"
+          }
+        },
+        {
+          "name": "Get Booking History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reports/booking-history/{{customerId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["reports", "booking-history", "{{customerId}}"]
+            },
+            "description": "Get booking history for a customer"
+          }
+        }
+      ]
+    }
+  ]
+}
