@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/massages")
 
-@CrossOrigin(origins = "*")
+
 public class MassageController {
     
     @org.springframework.beans.factory.annotation.Autowired

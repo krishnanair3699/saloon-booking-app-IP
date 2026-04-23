@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/reports")
 
-@CrossOrigin(origins = "*")
+
 public class ReportController {
     
     @org.springframework.beans.factory.annotation.Autowired
