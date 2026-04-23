@@ -5,7 +5,7 @@ import com.savadhika.dto.AuthResponse;
 import com.savadhika.dto.SignupRequest;
 import com.savadhika.service.AuthService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +15,12 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/auth")
-@RequiredArgsConstructor
+
 @CrossOrigin(origins = "*")
 public class AuthController {
     
-    private final AuthService authService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private AuthService authService;
     
     /**
      * POST /auth/signup

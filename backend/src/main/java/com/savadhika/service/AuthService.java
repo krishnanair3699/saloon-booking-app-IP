@@ -6,7 +6,7 @@ import com.savadhika.dto.SignupRequest;
 import com.savadhika.model.Customer;
 import com.savadhika.repository.CustomerRepository;
 import com.savadhika.util.JwtUtil;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,12 +16,15 @@ import org.springframework.transaction.annotation.Transactional;
  * Includes signup, login, and user management
  */
 @Service
-@RequiredArgsConstructor
+
 public class AuthService {
     
-    private final CustomerRepository customerRepository;
-    private final PasswordEncoder passwordEncoder;
-    private final JwtUtil jwtUtil;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CustomerRepository customerRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private PasswordEncoder passwordEncoder;
+    @org.springframework.beans.factory.annotation.Autowired
+    private JwtUtil jwtUtil;
     
     /**
      * Register a new customer

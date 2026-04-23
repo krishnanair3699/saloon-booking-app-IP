@@ -3,7 +3,7 @@ package com.savadhika.controller;
 import com.savadhika.dto.BookingRequest;
 import com.savadhika.model.Cart;
 import com.savadhika.service.BookingService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -15,11 +15,12 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/bookings")
-@RequiredArgsConstructor
+
 @CrossOrigin(origins = "*")
 public class BookingController {
     
-    private final BookingService bookingService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private BookingService bookingService;
     
     /**
      * POST /bookings/cart

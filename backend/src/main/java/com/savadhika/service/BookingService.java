@@ -5,7 +5,7 @@ import com.savadhika.model.Cart;
 import com.savadhika.model.Massage;
 import com.savadhika.repository.CartRepository;
 import com.savadhika.repository.MassageRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.HashMap;
@@ -18,11 +18,13 @@ import java.util.stream.Collectors;
  * Manages cart and booking process
  */
 @Service
-@RequiredArgsConstructor
+
 public class BookingService {
     
-    private final CartRepository cartRepository;
-    private final MassageRepository massageRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CartRepository cartRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private MassageRepository massageRepository;
     
     /**
      * Add massage to cart

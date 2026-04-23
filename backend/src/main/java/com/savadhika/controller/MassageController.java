@@ -2,7 +2,7 @@ package com.savadhika.controller;
 
 import com.savadhika.model.Massage;
 import com.savadhika.service.MassageService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -13,11 +13,12 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/massages")
-@RequiredArgsConstructor
+
 @CrossOrigin(origins = "*")
 public class MassageController {
     
-    private final MassageService massageService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private MassageService massageService;
     
     /**
      * GET /massages

@@ -4,7 +4,7 @@ import com.savadhika.dto.CouponValidationResponse;
 import com.savadhika.dto.PaymentRequest;
 import com.savadhika.service.CouponService;
 import com.savadhika.service.PaymentService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
@@ -15,12 +15,14 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/payments")
-@RequiredArgsConstructor
+
 @CrossOrigin(origins = "*")
 public class PaymentController {
     
-    private final PaymentService paymentService;
-    private final CouponService couponService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private PaymentService paymentService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CouponService couponService;
     
     /**
      * POST /payments/process

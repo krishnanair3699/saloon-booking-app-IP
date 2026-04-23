@@ -2,21 +2,23 @@ package com.savadhika.service;
 
 import com.savadhika.dto.MISReportResponse;
 import com.savadhika.dto.MISReportResponse.BookingData;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Service for generating MIS reports
  * Business intelligence and analytics
  */
 @Service
-@RequiredArgsConstructor
+
 public class ReportService {
     
-    private final JdbcTemplate jdbcTemplate;
+    @org.springframework.beans.factory.annotation.Autowired
+    private JdbcTemplate jdbcTemplate;
     
     /**
      * Generate MIS Report for a date range

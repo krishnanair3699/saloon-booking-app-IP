@@ -4,7 +4,7 @@ import com.savadhika.dto.CouponValidationResponse;
 import com.savadhika.model.Coupon;
 import com.savadhika.repository.CouponRepository;
 import com.savadhika.repository.CouponUsageRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
@@ -13,11 +13,13 @@ import java.time.LocalDateTime;
  * Business logic for coupon validation and discount calculation
  */
 @Service
-@RequiredArgsConstructor
+
 public class CouponService {
     
-    private final CouponRepository couponRepository;
-    private final CouponUsageRepository couponUsageRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CouponRepository couponRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CouponUsageRepository couponUsageRepository;
     
     /**
      * Validate coupon and calculate discount

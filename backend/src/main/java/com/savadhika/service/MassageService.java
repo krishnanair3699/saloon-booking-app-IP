@@ -2,7 +2,7 @@ package com.savadhika.service;
 
 import com.savadhika.model.Massage;
 import com.savadhika.repository.MassageRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
@@ -12,10 +12,11 @@ import java.util.List;
  * Business logic for massage management
  */
 @Service
-@RequiredArgsConstructor
+
 public class MassageService {
     
-    private final MassageRepository massageRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private MassageRepository massageRepository;
     
     /**
      * Get all massages

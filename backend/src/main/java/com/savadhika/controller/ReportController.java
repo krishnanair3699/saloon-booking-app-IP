@@ -2,7 +2,7 @@ package com.savadhika.controller;
 
 import com.savadhika.dto.MISReportResponse;
 import com.savadhika.service.ReportService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
@@ -13,11 +13,12 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/reports")
-@RequiredArgsConstructor
+
 @CrossOrigin(origins = "*")
 public class ReportController {
     
-    private final ReportService reportService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private ReportService reportService;
     
     /**
      * POST /reports/mis

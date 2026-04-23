@@ -4,7 +4,7 @@ import com.savadhika.dto.CouponValidationResponse;
 import com.savadhika.dto.PaymentRequest;
 import com.savadhika.model.*;
 import com.savadhika.repository.*;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.HashMap;
@@ -15,14 +15,19 @@ import java.util.Map;
  * Manages payment processing, transaction creation, and cart clearing
  */
 @Service
-@RequiredArgsConstructor
+
 public class PaymentService {
     
-    private final PaymentRepository paymentRepository;
-    private final TransactionRepository transactionRepository;
-    private final CartRepository cartRepository;
-    private final CouponService couponService;
-    private final CouponUsageRepository couponUsageRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private PaymentRepository paymentRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private TransactionRepository transactionRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CartRepository cartRepository;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CouponService couponService;
+    @org.springframework.beans.factory.annotation.Autowired
+    private CouponUsageRepository couponUsageRepository;
     
     /**
      * Process payment and create transaction
